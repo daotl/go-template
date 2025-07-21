@@ -37,7 +37,7 @@ you started with the essentials you'll need for your next Go project ;)
 
 ### Development
 
- - Supports Go `v1.19`, `v1.20` and `v1.21`
+ - Supports Go `v1.24`, `v1.23` and `v1.22`
  - Automated code formatting with [gofmt][gofmt-link] and [gofumpt][gofumpt-link]
  - Sort imports with [goimports][goimports-link] and [gci][gci-link]
  - Ready to use [pre-commit][precommit-link] setup, complete with a ton of hooks
@@ -132,7 +132,7 @@ values, and what they are used for
 | `private_project`          | **n**                   | Yes or No (`y` or `n`). Inquires if the project repository generated will be publicly accessible, or private. [Why is this needed?](#why-do-i-need-to-inform-if-the-generated-project-will-be-public) |
 | `use_codecov`              | **y**                   | Yes or No (`y` or `n`). Decides if [Codecov](http://codecov.com) is to be used in the project or not. Checkout [Setting up codecov](#how-to-integrate-codecov-for-automated-code-analysis)            |
 | `use_precommit`            | **y**                   | Yes or No (`y` or `n`). Decides if [*pre-commit*](https://pre-commit.com) configs should be included with the generated templates                                                                     |
-| `go_version`               | `1.17`                  | The version of Go to use in the project. Can be either `1.16`, `1.17` or `1.18`                                                                                                                       |
+| `go_version`               | `1.24`                  | The version of Go to use in the project. Can be either `1.24`, `1.23` or `1.22`                                                                                                                       |
 | `license`                  | `MIT`                   | The license you want to use in the generated project. One of `MIT`, `BSD-3`, `GNU GPL v3.0` and `Apache Software License 2.0`                                                                         |
 
 All values entered while setting up the Cookiecutter template will be saved in

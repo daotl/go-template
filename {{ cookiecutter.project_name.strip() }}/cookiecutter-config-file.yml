@@ -13,4 +13,5 @@ cookiecutter_inputs:
   use_codecov: "{{ cookiecutter.use_codecov }}"
   use_precommit: "{{ cookiecutter.use_precommit }}"
   go_version: "{{ cookiecutter.go_version }}"
+  go_toolchain_version: "{{ cookiecutter.go_toolchain_version }}"
   license: "{{ cookiecutter.license }}"

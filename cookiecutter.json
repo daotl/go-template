@@ -3,17 +3,18 @@
     "project_description": "{{ ''.join(cookiecutter.project_name.strip().replace('-', ' ').replace('_', ' ').title().split()) }} is a Go application created using https://github.com/notsatan/go-template",
     "go_module_path": "github.com/example/{{ cookiecutter.project_name.replace(' ', '-') }}",
     "license_owner": "example",
-    "base_branch": "master",
+    "base_branch": "main",
     "contact_email": "",
     "github_specific_features": "y",
     "private_project": "n",
     "use_codecov": "y",
     "use_precommit": "y",
     "go_version": [
-        "1.21",
-        "1.20",
-        "1.19"
+        "1.24",
+        "1.23",
+        "1.22"
     ],
+    "go_toolchain_version": "1.24.5",
     "license": [
         "MIT",
         "BSD-3",
