@@ -1,0 +1,9 @@
+assert_lefthook_installed: true
+
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      glob: '*'
+      run: golangci-lint --fix {staged_files}
+      stage_fixed: true

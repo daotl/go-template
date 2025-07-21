@@ -1,6 +1,6 @@
 {
     "project_name": "example-project",
-    "project_description": "{{ ''.join(cookiecutter.project_name.strip().replace('-', ' ').replace('_', ' ').title().split()) }} is a Go application created using https://github.com/notsatan/go-template",
+    "project_description": "{{ ''.join(cookiecutter.project_name.strip().replace('-', ' ').replace('_', ' ').title().split()) }} is a Go application created using https://github.com/daotl/go-template",
     "go_module_path": "github.com/example/{{ cookiecutter.project_name.replace(' ', '-') }}",
     "license_owner": "example",
     "base_branch": "main",
@@ -8,7 +8,11 @@
     "github_specific_features": "y",
     "private_project": "n",
     "use_codecov": "y",
-    "use_precommit": "y",
+    "use_git": [
+	    "lefthook",
+	    "pre-commit",
+	    "none"
+	],
     "go_version": [
         "1.24",
         "1.23",

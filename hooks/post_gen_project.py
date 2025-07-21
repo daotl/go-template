@@ -93,6 +93,21 @@ def disable_github_features(*, force: bool = False):
     remove_codecov(force=True)
 
 
+def remove_lefthook():
+    """
+    If Lefthook is not to be used, removes Lefthook configuration file
+    """
+
+    use_lefthook: bool = bool("{{ cookiecutter.use_lefthook }}".lower() == "y")
+    if use_lefthook:
+        return
+
+    config_file: str = os.path.join(CUR_DIR, ".lefthook.yml")
+
+    if os.path.exists(config_file):
+        os.remove(config_file)
+
+
 def remove_precommit():
     """
     If pre-commit is not to be used, removes pre-commit configuration file, and the Github workflow
@@ -127,7 +142,7 @@ def check_email_provided():
         return
 
     # List of files to be removed
-    files: List[str] = ["SECURITY.md", "CODE_OF_CONDUCT.md"]
+ no   files: List[str] = ["SECURITY.md", "CODE_OF_CONDUCT.md"]
     for f in files:
         deletable_file = os.path.join(CUR_DIR, f)
         if not os.path.exists(path=deletable_file):
@@ -170,7 +185,7 @@ def print_final_instructions():
         $ git push -u origin --all
 
     If you have any suggestions, or encounter any issue, please raise an issue;
-        https://github.com/notsatan/go-template
+        https://github.com/daotl/go-template
     """
 
     print(textwrap.dedent(message))
@@ -181,6 +196,7 @@ runners: Callable[[Optional[Any]], None] = [
     create_temp_directories,
     remove_codecov,
     disable_github_features,
+    remove_lefthook,
     remove_precommit,
     check_email_provided,
     print_final_instructions,

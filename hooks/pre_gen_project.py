@@ -41,7 +41,7 @@ for validator in validators:
         print(
             f"""  \
 \n\ngo-template is still under development, if you feel that the error is incorrect, \
-you are encouraged to raise an issue at: \n\thttps://github.com/notsatan/go-template
+you are encouraged to raise an issue at: \n\thttps://github.com/daotl/go-template
 """
         )
 
