@@ -8,11 +8,8 @@
     "github_specific_features": "y",
     "private_project": "n",
     "use_codecov": "y",
-    "use_git": [
-	    "lefthook",
-	    "pre-commit",
-	    "none"
-	],
+    "use_lefthook": "y",
+    "use_precommit": "y",
     "go_version": [
         "1.24",
         "1.23",

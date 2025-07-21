@@ -1,2 +1,9 @@
 [tools]
-go = "1.24.5"
+go = "{{ cookiecutter.go_version }}"
+golangci-lint = "latest"
+{%- if cookiecutter.use_lefthook %}
+lefthook = "latest"
+{%- endif -%}
+{%- if cookiecutter.use_precommit %}
+pre-commit = "latest"
+{% endif -%}

@@ -1,5 +1,0 @@
-[tools]
-go = "{{ cookiecutter.go_version }}"
-{% if cookiecutter.use_precommit %}
-"pipx:pre-commit" = "latest"
-{% endif %}

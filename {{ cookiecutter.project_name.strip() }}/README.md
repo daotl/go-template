@@ -33,6 +33,12 @@ This section is intended to help developers and contributors get a working copy 
 
 <details>
 <summary>
+    Requirements: Install [mise](https://mise.jdx.dev/) tool version manager.
+</summary><br>
+</details>
+
+<details>
+<summary>
     1. Clone this repository
 </summary><br>
 
@@ -44,10 +50,14 @@ cd {{ cookiecutter.go_module_path.strip('/').split('/')[-1] }}
 
 <details>
 <summary>
-    2. Install `golangci-lint`
+    2. Init Git repo, install tools with mise, and setup Lefthook
 </summary><br>
 
-Install `golangci-lint` from the [official website][golangci-install] for your OS
+```sh
+git init
+mise install
+lefthook install
+```
 </details>
 <br>
 

@@ -142,7 +142,7 @@ def check_email_provided():
         return
 
     # List of files to be removed
- no   files: List[str] = ["SECURITY.md", "CODE_OF_CONDUCT.md"]
+    files: List[str] = ["SECURITY.md", "CODE_OF_CONDUCT.md"]
     for f in files:
         deletable_file = os.path.join(CUR_DIR, f)
         if not os.path.exists(path=deletable_file):
