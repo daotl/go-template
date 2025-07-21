@@ -395,7 +395,7 @@ The remaining labels can be created as needed!
 [makefile-official]: https://www.gnu.org/software/make
 [pip-install]: https://pip.pypa.io/en/stable/installation
 [codecov-docs]: https://docs.codecov.com/docs#basic-usage
-[go-template-link]: https://github.com/notsatan/go-template
+[go-template-link]: https://github.com/daotl/go-template
 [golangci-install]: https://golangci-lint.run/usage/install
 [cookiecutter-link]: https://github.com/cookiecutter/cookiecutter
 [release-drafter]: https://github.com/marketplace/actions/release-drafter

@@ -4,9 +4,9 @@
 
 ![A gif displaying `go-template` in action][demo-gif]
 
-[![Build status](https://img.shields.io/github/actions/workflow/status/notsatan/go-template/black.yml?style=for-the-badge&logo=github)][black-action]
+[![Build status](https://img.shields.io/github/actions/workflow/status/daotl/go-template/black.yml?style=for-the-badge&logo=github)][black-action]
 [![No Dependencies](https://img.shields.io/badge/Dependencies-None-green?style=for-the-badge&logo=dependabot)][gomod-file]
-[![MIT License](https://img.shields.io/github/license/notsatan/go-template?color=red&style=for-the-badge)][project-license]
+[![MIT License](https://img.shields.io/github/license/daotl/go-template?color=red&style=for-the-badge)][project-license]
 [![Pre-Commit Enabled](https://img.shields.io/badge/Pre--Commit-Enabled-blue?style=for-the-badge&logo=pre-commit)][project-precommit]
 [![Go v1.19+](https://img.shields.io/badge/Go-%20v1.19+-black?style=for-the-badge&logo=go)][go-releases]
 [![Makefile Included](https://img.shields.io/badge/Makefile-Supported%20🚀-red?style=for-the-badge&logo=probot)][makefile-file]
@@ -18,13 +18,13 @@ A bleeding-edge Go project generator for your next project :wink:
 ## TL;DR
 
 ```
-cookiecutter gh:notsatan/go-template
+cookiecutter gh:daotl/go-template
 ```
 
 ***OR***
 
 ```
-cookiecutter https://github.com/notsatan/go-template
+cookiecutter https://github.com/daotl/go-template
 ```
 
 And you're good to go! Jump to the [setup](#microscope-setup-instructions) section
@@ -98,13 +98,13 @@ Once you have cookiecutter installed, move over to the directory where you want 
 generate your project and run
 
 ```sh
-cookiecutter gh:notsatan/go-template
+cookiecutter gh:daotl/go-template
 ```
 
 Alternatively, you can achieve the same results with the command
 
 ```sh
-cookiecutter https://github.com/notsatan/go-template/
+cookiecutter https://github.com/daotl/go-template/
 ```
 
 ### Input Variables
@@ -284,7 +284,7 @@ In simpler terms, if the Go module path is
 github.com/notsatan/go-template
 ```
 
-Any pull request raised by *dependabot* will assign `notsatan` (me) as the reviewer.
+Any pull request raised by *dependabot* will assign `notsatan` as the reviewer.
 
 While this works well for normal users, at the same time, for organizations, dependabot
 will try to assign pull requests to the entire organization!
@@ -338,7 +338,7 @@ compared to upstream!
 
 ## :shield: License
 
-![MIT License](https://img.shields.io/github/license/notsatan/go-template?color=red&style=for-the-badge)
+![MIT License](https://img.shields.io/github/license/daotl/go-template?color=red&style=for-the-badge)
 
 This project is licensed under the terms of the `MIT` license. See [LICENSE](./LICENSE)
 for more details.
@@ -393,7 +393,7 @@ for more details.
 [issue-templates]: ./%7B%7B%20cookiecutter.project_name.strip()%20%7D%7D/.github/ISSUE_TEMPLATE
 [pr-template]: ./%7B%7B%20cookiecutter.project_name.strip()%20%7D%7D/.github/PULL_REQUEST_TEMPLATE.md
 [dependabot-config-file]: ./%7B%7B%20cookiecutter.project_name.strip()%20%7D%7D/.github/dependabot.yml
-[precommit-config-file]: ./%7B%7B%20cookiecutter.project_name.strip()%20%7D%7D/.pre-commit-config.yaml
+[precommit-config-file]: {{ cookiecutter.project_name.strip() }}/_git-hooks/.pre-commit-config.yaml
 [release-drafter-file]: ./%7B%7B%20cookiecutter.project_name.strip()%20%7D%7D/.github/release-drafter.yml
 [demo-gif]: https://user-images.githubusercontent.com/22884507/177801711-63b49b09-fa68-4db3-b543-69aed73e0f13.gif
 [creating-secrets]: https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository
