@@ -1,9 +1,16 @@
 [tools]
-go = "{{ cookiecutter.go_version }}"
-golangci-lint = "latest"
 {%- if cookiecutter.use_lefthook %}
 lefthook = "latest"
 {%- endif -%}
 {%- if cookiecutter.use_precommit %}
 pre-commit = "latest"
+{% endif -%}
+go = "{{ cookiecutter.go_version }}"
+golangci-lint = "latest"
+
+[hooks]
+{%- if cookiecutter.use_lefthook %}
+postinstall = "lefthook install"
+{% elif cookiecutter.use_precommit %}
+postinstall = "pre-commit install"
 {% endif -%}
