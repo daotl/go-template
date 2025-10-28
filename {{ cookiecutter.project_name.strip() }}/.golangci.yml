@@ -370,6 +370,8 @@ linters:
 
     revive:
       rules:
+        - name: blank-imports
+          disabled: true
         - name: unused-parameter
           arguments:
             - allow-regex: "^_|ctx"
@@ -452,3 +454,13 @@ linters:
           - gosec
           - noctx
           - wrapcheck
+      # Allow shadowed variables named "err"
+      - text: 'shadow: declaration of "err" shadows declaration at line \d+'
+        linters: [ govet ]
+      # Ignore unused variables in test/mock files
+      - path: '.+_(test|mock)\.go'
+        text: "unused-parameter: parameter '.+' seems to be unused, consider removing or renaming it as _"
+        linters: [ revive ]
+      # Allow xx/utils, xx/config, xx/client, etc.
+      - text: 'avoid meaningless package names'
+        linters: [ revive ]
